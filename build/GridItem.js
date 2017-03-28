@@ -294,7 +294,7 @@ var GridItem = function (_React$Component) {
       switch (handlerName) {
         case 'onDragStart':
           {
-            e.preventDefault();
+            e.stopPropagation();
             var parentRect = node.offsetParent.getBoundingClientRect();
             var clientRect = node.getBoundingClientRect();
             newPosition.left = clientRect.left - parentRect.left;
